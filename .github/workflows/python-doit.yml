@@ -1,0 +1,25 @@
+name: Python Doit
+
+on:
+  schedule:
+    - cron:  '10 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: setup python
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.7'
+    - name: python doit
+      run: python script/make-data-python.py
+      env:
+        ID4: ${{ secrets.ID4 }     
+    - name: publish data.json
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        publish_branch: data
