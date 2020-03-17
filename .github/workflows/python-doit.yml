@@ -2,7 +2,7 @@ name: Python Doit
 
 on:
   schedule:
-    - cron:  '20 * * * *'
+    - cron:  '45 * * * *'
 
 jobs:
   build:
@@ -14,7 +14,7 @@ jobs:
       with:
         python-version: '3.7'
     - name: python doit
-      run: python script/make-data-python.py
+      run: python script/make-data-json.py
       env:
         ID4: ${{ secrets.ID4 }}     
     - name: publish data.json
