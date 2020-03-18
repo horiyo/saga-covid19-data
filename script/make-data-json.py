@@ -47,10 +47,10 @@ for k in dict:
 daylist = sorted(list)
 
 dd = {}
-dd['inspections_summary'] = {}
-labels = dd['inspections_summary']['labels'] = []
-dd['inspections_summary']['data'] = {}
-inspections = dd['inspections_summary']['data']['県内'] = []
+#dd['inspections_summary'] = {}
+#labels = dd['inspections_summary']['labels'] = []
+#dd['inspections_summary']['data'] = {}
+#inspections = dd['inspections_summary']['data']['県内'] = []
 
 
 out = []
@@ -60,8 +60,8 @@ for d in daylist:
     list.append(k)
   timelist = sorted(list)
   ti = timelist[-1]
-  labels.append("{}/{}".format(d[4:6], d[6:8])) 
-  inspections.append(dict[d][ti][1]) 
+  #labels.append("{}/{}".format(d[4:6], d[6:8])) 
+  #inspections.append(dict[d][ti][0]+dict[d][ti][1]) 
   
 dd['main_summary'] = {}
 dd['main_summary']['attr'] = '検査実施人数' 
