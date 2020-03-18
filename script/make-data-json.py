@@ -65,7 +65,7 @@ for d in daylist:
   
 dd['main_summary'] = {}
 dd['main_summary']['attr'] = '検査実施人数' 
-dd['main_summary']['value'] = dict[daylist[-1]][ti][1]
+dd['main_summary']['value'] = dict[daylist[-1]][ti][0]+dict[daylist[-1]][ti][1]
 c = dd['main_summary']['children'] = []
 c.append({})
 c[0]['attr'] = '陽性患者数' 
