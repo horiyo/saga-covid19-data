@@ -78,5 +78,5 @@ c[0]['value'] = dict[daylist[-1]][ti][0]
 
 os.mkdir(distDir)
 fout = open(distDir + '/' + 'data.json', 'w')
-json.dump(dd, fout, indent=2, sort_keys=True, ensure_ascii=False)
+json.dump(dd, fout, indent=4, sort_keys=True, ensure_ascii=False)
 fout.close()
