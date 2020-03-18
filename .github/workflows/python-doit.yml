@@ -2,7 +2,7 @@ name: Python Doit
 
 on:
   schedule:
-    - cron:  '45 * * * *'
+    - cron:  '55 * * * *'
 
 jobs:
   build:
